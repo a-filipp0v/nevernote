@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.nvn.model.User">
+        <property name="username" value="user1"/>
+        <property name="password" value="9812crjf"/>
+    </bean>
+
+    <bean id="user2" class="com.nvn.model.User">
+        <property name="username" value="user2"/>
+        <property name="password" value="a8c9fss8"/>
+    </bean>
+
+
+    <bean id="note" class="com.nvn.model.Note">
+        <property name="title" value="title1"/>
+        <property name="content" value="text1"/>
+        <property name="noteholder" ref="noteholder"/>
+    </bean>
+
+    <bean id="note2" class="com.nvn.model.Note">
+        <property name="title" value="title2"/>
+        <property name="content" value="text2"/>
+        <property name="noteholder" ref="noteholder"/>
+    </bean>
+
+    <bean id="noteholder" class="com.nvn.model.Noteholder">
+        <property name="name" value="nh1"/>
+        <property name="user" ref="user"/>
+    </bean>
+    <bean id="label1" class="com.nvn.model.Label">
+        <property name="name" value="label1"/>
+    </bean>
+
+    <bean id="label2" class="com.nvn.model.Label">
+        <property name="name" value="label2"/>
+    </bean>
+
+
+</beans>
